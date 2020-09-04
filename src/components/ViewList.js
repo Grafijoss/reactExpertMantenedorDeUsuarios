@@ -5,11 +5,14 @@ import List from './List'
 
 export default class ViewList extends Component {
 	render() {
-		const { data } = this.props;
+		const { data, handleClick, handleNewUser } = this.props;
 		return (
 			<React.Fragment>
-				<Header />
-				<List data={data} />
+				<Header handleNewUser={handleNewUser} />
+				<List
+					data={data}
+					handleClick={handleClick}
+				/>
 			</React.Fragment>
 		)
 	}

@@ -8,11 +8,19 @@ const styles = {
 }
 
 export default class Header extends Component {
+
+
 	render() {
+
+		const { handleNewUser } = this.props
+
 		return (
 			<header>
 				<h2 style={styles.inline}>Usuarios</h2>
-				<button style={styles.inline}>Nuevo usuario</button>
+				<button
+					onClick={handleNewUser}
+					style={styles.inline}
+				>Nuevo usuario</button>
 			</header>
 		)
 	}
